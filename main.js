@@ -1,9 +1,9 @@
 // main.js
 
-import { createHeader, createProductCard } from "./uiComponent.js";
+import { createHeader } from "./uiComponent.js";
 import { createSearchInput } from "./uiComponent.js";
+import { createProductCard } from "./uiComponent.js"; 
 import { getProducts } from "./apiService.js";
-
 
 const headerHtml = document.querySelector("#header");
 const searchSectionHtml = document.querySelector("#searchSection");
@@ -29,7 +29,6 @@ async function displayProducts() {
         })
 
     
-        productListHtml.innerHTML = "";
     } catch (error) {
         productListHtml.innerHTML = `<p style="color: red;">Fel: ${error.message}</p>`;
     }

@@ -21,13 +21,12 @@ export function createSearchInput() {
 
 // Visa produkter
 export function createProductCard(product) {
-    const article = createElement("article");
+    const article = document.createElement("article");
     article.className = "product-card";
 
     article.innerHTML = `<img src="${product.image}" alt="${product.title}" loading="lazy" />
     <h3>${product.title}</h3>
-    <p class="price">$${product.price}</p>
-    <p class="rate">${product.rate}</p>`;
+    <p class="price">$${product.price}</p>`;
 
     return article;
 }
